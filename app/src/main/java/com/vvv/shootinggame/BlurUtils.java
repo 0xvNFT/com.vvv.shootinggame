@@ -22,18 +22,14 @@ public class BlurUtils {
         int width = drawable.getIntrinsicWidth();
         int height = drawable.getIntrinsicHeight();
 
-        // Check if width or height is 0 or negative
         if (width <= 0 || height <= 0) {
-            return drawable; // Return the original drawable without applying blur
+            return drawable;
         }
 
-        // Convert the drawable to a bitmap
         Bitmap bitmap = drawableToBitmap(drawable);
 
-        // Apply the blur effect to the bitmap
         Bitmap blurredBitmap = fastBlur(context, bitmap, radius);
 
-        // Create a new drawable from the blurred bitmap
         Drawable blurredDrawable = new BitmapDrawable(context.getResources(), blurredBitmap);
 
         return blurredDrawable;
@@ -53,9 +49,7 @@ public class BlurUtils {
         int width = drawable.getIntrinsicWidth();
         int height = drawable.getIntrinsicHeight();
 
-        // Check if the drawable has valid dimensions
         if (width <= 0 || height <= 0) {
-            // Return a placeholder bitmap with 1x1 dimensions
             return Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888);
         }
 

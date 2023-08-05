@@ -40,15 +40,11 @@ public class GamingFragment extends BaseFragment {
         ImageView instructionImageView = view.findViewById(R.id.instruction);
         instructionImageView.setOnClickListener(v -> openInstructionActivity());
 
-        // Get the original drawable from your XML resource
         Drawable originalDrawable = getResources().getDrawable(R.drawable.drawable_blurred_horizontal_line);
 
-        // Apply the blur effect to the original drawable using BlurUtils (adjust the blur radius as needed)
         Drawable blurredDrawable = BlurUtils.applyBlur(this, originalDrawable, 10);
 
-        // Set the blurred drawable as the background of the View
         if (blurredDrawable != null) {
-            // Use the class-level blurredHorizontalLine variable here
             blurredHorizontalLine = view.findViewById(R.id.blurredHorizontalLine);
             blurredHorizontalLine.setBackground(blurredDrawable);
         }
