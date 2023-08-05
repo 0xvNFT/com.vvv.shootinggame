@@ -9,19 +9,8 @@
     tools:context=".fragment.GamingFragment"
     tools:ignore="ContentDescription">
 
-    <!--    <ImageView-->
-    <!--        android:id="@+id/cannon"-->
-    <!--        android:layout_width="100dp"-->
-    <!--        android:layout_height="100dp"-->
-    <!--        android:layout_marginBottom="40dp"-->
-    <!--        android:src="@drawable/cannon"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.498"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        tools:ignore="ContentDescription" />-->
-
     <ImageView
+        android:id="@+id/terrace"
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:scaleType="fitXY"
@@ -34,12 +23,23 @@
 
     <com.vvv.shootinggame.logic.GamingViews
         android:id="@+id/game_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/blurredHorizontalLine"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/drawable_blurred_horizontal_line"
+        app:layout_constraintBottom_toTopOf="@+id/terrace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/score_text"

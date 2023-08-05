@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- The blurred line as the first layer -->
+    <item android:id="@+id/blurLineLayer">
+        <shape android:shape="line">
+            <stroke
+                android:width="2dp"
+                android:color="#FFFFFFFF" />
+        </shape>
+    </item>
+
+    <!-- The background (behind the blurred line) as the second layer -->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid android:color="#00FFFFFF" /> <!-- Set the color of the background as needed -->
+        </shape>
+    </item>
+
+</layer-list>

@@ -36,11 +36,11 @@
         android:id="@+id/scoreListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:stackFromBottom="true"
-        android:transcriptMode="alwaysScroll"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rank"
         tools:ignore="ContentDescription" />
-
+    <!--    android:stackFromBottom="true"-->
+    <!--    android:transcriptMode="alwaysScroll"-->
 </androidx.constraintlayout.widget.ConstraintLayout>

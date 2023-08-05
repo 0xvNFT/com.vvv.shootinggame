@@ -1,6 +1,8 @@
 package com.vvv.shootinggame.fragment;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.vvv.shootinggame.BlurUtils;
 import com.vvv.shootinggame.InstructionActivity;
 import com.vvv.shootinggame.R;
 import com.vvv.shootinggame.RankActivity;
@@ -22,7 +25,7 @@ public class GamingFragment extends BaseFragment {
 
     private final int score = 0;
     private GamingMachine mGamingMachine;
-
+    private View blurredHorizontalLine;
     public GamingFragment() {
     }
 
@@ -36,6 +39,19 @@ public class GamingFragment extends BaseFragment {
 
         ImageView instructionImageView = view.findViewById(R.id.instruction);
         instructionImageView.setOnClickListener(v -> openInstructionActivity());
+
+        // Get the original drawable from your XML resource
+        Drawable originalDrawable = getResources().getDrawable(R.drawable.drawable_blurred_horizontal_line);
+
+        // Apply the blur effect to the original drawable using BlurUtils (adjust the blur radius as needed)
+        Drawable blurredDrawable = BlurUtils.applyBlur(this, originalDrawable, 10);
+
+        // Set the blurred drawable as the background of the View
+        if (blurredDrawable != null) {
+            // Use the class-level blurredHorizontalLine variable here
+            blurredHorizontalLine = view.findViewById(R.id.blurredHorizontalLine);
+            blurredHorizontalLine.setBackground(blurredDrawable);
+        }
         return view;
     }
 
@@ -119,4 +135,7 @@ public class GamingFragment extends BaseFragment {
         return true;
     }
 
+    public Drawable applyBlur(Context applicationContext, Drawable originalDrawable, int radius) {
+        return BlurUtils.applyBlur(applicationContext, originalDrawable, radius);
+    }
 }

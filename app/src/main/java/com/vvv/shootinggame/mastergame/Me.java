@@ -9,6 +9,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PathDashPathEffect;
 import android.graphics.PathEffect;
+import android.view.View;
 import android.widget.TextView;
 
 import com.vvv.shootinggame.R;
@@ -31,6 +32,7 @@ public class Me extends Coke {
     private float mSpeedX, mSpeedY;
     private boolean mShoot = false;
     private int mScore = 0;
+    private View blurredHorizontalLine;
 
     public Me(GamingMachine gamingMachine, BubbleManagement bubbleManagement) {
         super(gamingMachine, BubbleColors.BLUE.getImageResId());
