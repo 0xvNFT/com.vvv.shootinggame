@@ -29,7 +29,7 @@ public class GamingFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_game, container, false);
+        View view = inflater.inflate(R.layout.fragment_gaming, container, false);
 
         ImageView rankImageView = view.findViewById(R.id.rank);
         rankImageView.setOnClickListener(v -> openRankActivity());
