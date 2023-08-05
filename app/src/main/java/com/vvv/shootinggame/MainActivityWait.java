@@ -377,7 +377,7 @@ public class MainActivityWait extends AppCompatActivity {
         bitmap1.getPixels(pixels1, 0, width1, 0, 0, width1, height1);
         bitmap2.getPixels(pixels2, 0, width2, 0, 0, width2, height2);
 
-        int tolerance = 25; // Adjust this value for color similarity tolerance
+        int tolerance = 25;
 
         for (int i = 0; i < width1; i++) {
             for (int j = 0; j < height1; j++) {
