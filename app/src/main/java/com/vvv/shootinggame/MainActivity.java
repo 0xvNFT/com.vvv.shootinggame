@@ -6,7 +6,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.vvv.shootinggame.fragment.BaseFragment;
-import com.vvv.shootinggame.fragment.GameFragment;
+import com.vvv.shootinggame.fragment.GamingFragment;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG_FRAGMENT = "content";
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startGame() {
-        navigateToFragment(new GameFragment());
+        navigateToFragment(new GamingFragment());
     }
 
     public void navigateToFragment(BaseFragment fragment) {

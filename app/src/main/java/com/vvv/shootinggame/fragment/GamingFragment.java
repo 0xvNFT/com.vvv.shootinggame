@@ -18,12 +18,12 @@ import com.vvv.shootinggame.mastergame.Me;
 
 import java.util.Random;
 
-public class GameFragment extends BaseFragment {
+public class GamingFragment extends BaseFragment {
 
     private final int score = 0;
     private GamingMachine mGamingMachine;
 
-    public GameFragment() {
+    public GamingFragment() {
     }
 
     @Override
