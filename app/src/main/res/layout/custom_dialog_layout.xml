@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#BFFFC6"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Add your custom views here -->
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:text="Congratulations!"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="You have cleared all bubbles in this level!"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <!-- Add custom buttons or other views as needed -->
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_bg"
+        android:padding="8dp"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:text="Next Level"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/main_menu_button"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_bg"
+        android:padding="8dp"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:text="Main Menu"
+        android:textColor="@color/white" />
+</LinearLayout>
